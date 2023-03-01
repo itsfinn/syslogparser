@@ -211,9 +211,7 @@ func (p *Parser) parseTimestamp() (time.Time, error) {
 	}
 
 	if p.customTimestampFormat != "" {
-		tsFmts = []string{
-			p.customTimestampFormat,
-		}
+		tsFmts = append(tsFmts, p.customTimestampFormat)
 	}
 
 	found := false
